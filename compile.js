@@ -24,3 +24,4 @@ const input = {
 const output = JSON.parse(solc.compile(JSON.stringify(input)));
 
 module.export = output.contracts['storageName.sol'].StorageName;
+// Retorna un ABI y un EVM bytecode
