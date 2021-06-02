@@ -3,7 +3,7 @@ const fs = require('fs');
 const solc = require('solc');
 
 const storageName = path.resolve(__dirname, 'contracts', 'storageName.sol');
-const source = fsreadFileSync(storageName, 'utf8');
+const source = fs.readFileSync(storageName, 'utf8');
 
 const input = {
     language: 'Solidity',
