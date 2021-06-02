@@ -1,0 +1,20 @@
+{
+  "name": "20210601",
+  "version": "1.0.0",
+  "description": "",
+  "main": "compile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xwarlos/20210601.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xwarlos/20210601/issues"
+  },
+  "homepage": "https://github.com/xwarlos/20210601#readme"
+}
