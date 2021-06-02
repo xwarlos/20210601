@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/xwarlos/20210601/issues"
   },
-  "homepage": "https://github.com/xwarlos/20210601#readme"
+  "homepage": "https://github.com/xwarlos/20210601#readme",
+  "dependencies": {
+    "solc": "^0.8.4"
+  }
 }
