@@ -9,7 +9,7 @@ const input = {
     language: 'Solidity',
     sources: {
         'storageName.sol': {
-            content: source
+            content: source,
         }
     },
     settings: {
@@ -19,9 +19,9 @@ const input = {
             }
         }
     }
-};
+}
 
 const output = JSON.parse(solc.compile(JSON.stringify(input)));
 
-module.export = output.contracts['storageName.sol'].StorageName;
+module.exports = output.contracts['storageName.sol'].StorageName
 // Retorna un ABI y un EVM bytecode

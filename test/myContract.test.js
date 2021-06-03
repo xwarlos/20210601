@@ -2,7 +2,7 @@ const assert = require('assert');
 // Ganache provee cuentas (testnet?)
 const ganache = require('ganache-cli');
 // Web3 en mayúscula porque es una clase de JS, en minúscula cuando es una instancia
-const Web3 = require('web3')                                    // Consultar ether.js (más ligero)
+const Web3 = require('web3');                                   // Consultar ether.js (más ligero)
 const web3 = new Web3(ganache.provider());                      // Ganache es el nodo de conexión aquí
 const compile = require('../compile');
 const abi = compile.abi;                                        // Esquema de las funciones del contrato
@@ -11,6 +11,7 @@ const bytecode = compile.evm.bytecode.object;
 let accounts;
 let contractInstance;
 
+// ReferenceError: beforeEach is not defined
 beforeEach(async () => {
     // Obtenemos las cuentas del nodo (Ganache)
     accounts = await web3.eth.getAccounts();                    // await espera antes de ejecutar el código siguiente (async)
@@ -23,8 +24,8 @@ beforeEach(async () => {
     .send({
         from: accounts[0],
         gas: '1000000'
-    })
-});
+    });
+});s
 
 // Tests de Mocha
 describe('StorageName', () => {
