@@ -6,7 +6,7 @@ const Web3 = require('web3');                                   // Consultar eth
 const web3 = new Web3(ganache.provider());                      // Ganache es el nodo de conexión aquí
 const compile = require('../compile');
 const abi = compile.abi;                                        // Esquema de las funciones del contrato
-const bytecode = compile.evm.bytecode.object;
+const bytecode = compile.evm.bytecode.object;                   // Código del EVM (Ethereum Virtual Machine)
 
 let accounts;
 let contractInstance;
