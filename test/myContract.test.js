@@ -25,7 +25,7 @@ beforeEach(async () => {
         from: accounts[0],
         gas: '1000000'
     });
-});s
+});
 
 // Tests de Mocha
 describe('StorageName', () => {
