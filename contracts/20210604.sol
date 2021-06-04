@@ -59,3 +59,44 @@ contract MyContract {
         delete vehicles[add_][0];
     }
 }
+
+contract ConStruct {
+    event eveTest(address newOwner, uint256 amount);
+    
+    struct Vehiculo {
+        string marca;
+        uint16 km;
+        uint16 potencia;
+        
+        /* en un struct Solidity sí puede repartir el tamaño del uint en el bloque de 256 bits (optimización)
+         * en los arrays no lo hace aparentemente (en esta versión)
+         * recordar parsear el uint16 para que sea compatible con los otros uint  
+         */
+    }
+    
+    Vehiculo[] public vehiculos;
+    mapping(address => Vehiculo) public mapVehiculo;                //tendría más sentido mapearlo al índice del array
+    
+    function setVehiculo() public {
+        vehiculos.push(
+            Vehiculo({
+               marca: "SEAT",
+               km: 1000,
+               potencia: 100
+            })
+        );
+    }
+    
+    function updateVehiculo(address add_) public {
+        vehiculos[0].marca = "Lada";
+        mapVehiculo[add_].marca = "Fiat";
+        //etc
+        
+        emit eveTest(add_, 1000);
+    }
+    
+    function delVehiculo() public {
+        //resetea los valores individualmente
+        delete vehiculos[0];
+    }
+}
