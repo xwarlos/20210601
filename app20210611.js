@@ -11,6 +11,7 @@ addContract = "0xBE0eB53F46cd790Cd13851d5EFf43D12404d33E8";         // address d
 const contrInstance = new web3.eth.Contract(abiContract, addContract);
 contrInstance.methods.name().call().then(res => console.log(res));  // aquí ya falla
 
+// https://medium.com/finnovate-io/how-do-i-sign-transactions-with-web3-f90a853904a2
 const privateKey = Buffer.from("aquí iría la clave privada", "hex");// etc
 
 // se acabó el tiempo
