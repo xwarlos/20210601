@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/xwarlos/20210601#readme",
   "dependencies": {
+    "ethereumjs-tx": "^2.1.2",
     "ganache-cli": "^6.12.2",
     "mocha": "^8.4.0",
     "solc": "^0.8.4",
