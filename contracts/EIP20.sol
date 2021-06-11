@@ -25,7 +25,7 @@ contract TestToken is ERC20 {
     uint8 public override decimals;
     uint256 public override totalSupply;
     
-    constructor(uint256 _supply, string memory _name, string memory _symbol, uint8 _decimals) public {
+    constructor(uint256 _supply, string memory _name, string memory _symbol, uint8 _decimals) {
         balanceOf[msg.sender] = _supply;                                         // se asigna inicialmente todo el supply al msg.sender
         name = _name;
         symbol = _symbol;
